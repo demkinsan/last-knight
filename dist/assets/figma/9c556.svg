@@ -1,0 +1,36 @@
+<svg preserveAspectRatio="none" overflow="visible" style="display: block;" width="41" height="56" viewBox="0 0 41 56" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="Group 2147224412">
+<g id="Group 2147224409">
+<g id="Ellipse 203190631" opacity="0.2" filter="url(#filter0_f_0_75)">
+<ellipse cx="18.5" cy="46.5" rx="14.5" ry="5.5" fill="#F6B40E"/>
+</g>
+<g id="Ellipse 203190640" opacity="0.2" filter="url(#filter1_f_0_75)">
+<ellipse cx="18.5" cy="44.5" rx="8.5" ry="2.5" fill="#3D2C00"/>
+</g>
+<g id="Union">
+<use xlink:href="#stroke0_0_75" fill="#866000"/>
+<mask id="stroke1_0_75" maskUnits="userSpaceOnUse" x="0" y="0" width="41" height="45" fill="black">
+<rect fill="white" width="41" height="45"/>
+<use xlink:href="#stroke0_0_75"/>
+</mask>
+<path d="M19.3152 3C10.3045 3 3 11.7304 3 22.5C3 33.2696 10.3045 42 19.3152 42C22.0186 42 18.9814 42 21.6848 42C30.6955 42 38 33.2696 38 22.5C38 11.7304 30.6955 3 21.6848 3C18.9816 3 22.0184 3 19.3152 3Z" stroke-width="6" stroke="black" mask="url(#stroke1_0_75)"/>
+</g>
+<ellipse id="Ellipse 203190649" cx="21.5" cy="22.5" rx="16.5" ry="19.5" fill="#F6B40E"/>
+</g>
+<path id="Star 1" d="M11 29L12.1879 34.8121L18 36L12.1879 37.1879L11 43L9.81206 37.1879L4 36L9.81206 34.8121L11 29Z" fill="white"/>
+<path id="Star 2" d="M17 7L18.0182 11.9818L23 13L18.0182 14.0182L17 19L15.9818 14.0182L11 13L15.9818 11.9818L17 7Z" fill="white"/>
+</g>
+<defs>
+<filter id="filter0_f_0_75" x="0" y="37" width="37" height="19" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+<feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
+<feGaussianBlur stdDeviation="2" result="effect1_foregroundBlur_0_75"/>
+</filter>
+<filter id="filter1_f_0_75" x="9" y="41" width="19" height="7" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+<feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
+<feGaussianBlur stdDeviation="0.5" result="effect1_foregroundBlur_0_75"/>
+</filter>
+<path id="stroke0_0_75" d="M19.3152 3C10.3045 3 3 11.7304 3 22.5C3 33.2696 10.3045 42 19.3152 42C22.0186 42 18.9814 42 21.6848 42C30.6955 42 38 33.2696 38 22.5C38 11.7304 30.6955 3 21.6848 3C18.9816 3 22.0184 3 19.3152 3Z"/>
+</defs>
+</svg>

@@ -1,0 +1,15 @@
+<svg preserveAspectRatio="none" overflow="visible" style="display: block;" width="11" height="45" viewBox="0 0 11 45" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="Group 2147224409">
+<g id="Union">
+<use xlink:href="#stroke0_0_4" fill="#866000"/>
+<mask id="stroke1_0_4" maskUnits="userSpaceOnUse" x="0" y="0" width="11" height="45" fill="black">
+<rect fill="white" width="11" height="45"/>
+<use xlink:href="#stroke0_0_4"/>
+</mask>
+<path d="M6.95687 3C7.53298 3 8 11.7304 8 22.5C8 33.2696 7.53298 42 6.95687 42C6.78403 42 4.21597 42 4.04313 42C3.46702 42 3 33.2696 3 22.5C3 11.7304 3.46702 3 4.04313 3C4.21596 3 6.78404 3 6.95687 3Z" stroke-width="6" stroke="black" mask="url(#stroke1_0_4)"/>
+</g>
+</g>
+<defs>
+<path id="stroke0_0_4" d="M6.95687 3C7.53298 3 8 11.7304 8 22.5C8 33.2696 7.53298 42 6.95687 42C6.78403 42 4.21597 42 4.04313 42C3.46702 42 3 33.2696 3 22.5C3 11.7304 3.46702 3 4.04313 3C4.21596 3 6.78404 3 6.95687 3Z"/>
+</defs>
+</svg>

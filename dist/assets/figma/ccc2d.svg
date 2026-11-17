@@ -1,0 +1,18 @@
+<svg preserveAspectRatio="none" overflow="visible" style="display: block;" width="20" height="51" viewBox="0 0 20 51" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="Group 2147224409">
+<g id="Union">
+<use xlink:href="#stroke0_0_4" fill="#866000"/>
+<mask id="stroke1_0_4" maskUnits="userSpaceOnUse" x="0" y="6" width="20" height="45" fill="black">
+<rect fill="white" y="6" width="20" height="45"/>
+<use xlink:href="#stroke0_0_4"/>
+</mask>
+<path d="M12.1321 9C14.8206 9 17 17.7304 17 28.5C17 39.2696 14.8206 48 12.1321 48C11.3255 48 8.67454 48 7.86792 48C5.17944 48 3 39.2696 3 28.5C3 17.7304 5.17944 9 7.86792 9C8.6745 9 11.3255 9 12.1321 9Z" stroke-width="6" stroke="black" mask="url(#stroke1_0_4)"/>
+</g>
+<ellipse id="Ellipse 203190649" cx="8" cy="28.5" rx="5" ry="19.5" fill="#F6B40E"/>
+<path id="Star 1" d="M14.97 4.94975L11.7003 9.89949L14.97 14.8492L10.0203 11.5795L5.07054 14.8492L8.34028 9.89949L5.07054 4.94975L10.0203 8.21949L14.97 4.94975Z" fill="white"/>
+<path id="Star 3" d="M5.24503 37.708L4.11676 39.4159L5.24503 41.1239L3.53706 39.9957L1.82909 41.1239L2.95735 39.4159L1.82909 37.708L3.53706 38.8362L5.24503 37.708Z" fill="white"/>
+</g>
+<defs>
+<path id="stroke0_0_4" d="M12.1321 9C14.8206 9 17 17.7304 17 28.5C17 39.2696 14.8206 48 12.1321 48C11.3255 48 8.67454 48 7.86792 48C5.17944 48 3 39.2696 3 28.5C3 17.7304 5.17944 9 7.86792 9C8.6745 9 11.3255 9 12.1321 9Z"/>
+</defs>
+</svg>
