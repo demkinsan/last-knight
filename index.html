@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#161618">
+  <meta name="description" content="Последний конь — бесконечная шахматная игра. Уходи от атак, собирай монеты и защищай короля.">
+  <title>Последний конь — Ход за ходом</title>
+  <link rel="icon" href="assets/figma/07a17.svg">
+  <link rel="stylesheet" href="base.css">
+  <link rel="stylesheet" href="style.css?v=1.2.0">
+  <script src="engine.js?v=1.2.0" defer></script>
+  <script src="app.js?v=1.2.0" defer></script>
+</head>
+<body>
+  <main class="game-shell" aria-label="Последний конь">
+    <section class="board-section" aria-label="Игровое поле">
+      <div class="board-wrap">
+        <div class="rank-labels" aria-hidden="true"><span>8</span><span>7</span><span>6</span><span>5</span><span>4</span><span>3</span><span>2</span><span>1</span></div>
+        <div id="board" class="board" role="group" aria-label="Шахматная доска, 8 на 8"></div>
+        <div class="file-labels" aria-hidden="true"><span>a</span><span>b</span><span>c</span><span>d</span><span>e</span><span>f</span><span>g</span><span>h</span></div>
+        <section id="overlay" class="board-overlay" aria-label="Состояние игры" hidden></section>
+      </div>
+      <div class="legend"><span data-hint-legend><i class="safe-dot"></i>твой ход</span><span data-hint-legend><i class="danger-dot"></i>под ударом</span><span><i class="intent-dot"></i>ход врага</span><span><i class="spawn-dot"></i>появление</span></div>
+    </section>
+    <aside class="task-panel">
+      <div class="top-actions"><span id="timer" role="timer" hidden>00:20</span><button id="about" class="round-button" aria-label="Правила игры" title="Правила игры"><img src="assets/figma/63cf8.svg" alt=""></button><button id="menu" class="round-button" aria-label="Открыть меню" title="Меню"><img src="assets/figma/7e192.svg" alt=""></button></div>
+      <div class="task-copy">
+        <div class="eyebrow" id="mode-label">БЕСКОНЕЧНОЕ ПРИКЛЮЧЕНИЕ</div>
+        <h1>Последний конь <span class="title-divider">|</span> <span id="wave-number">01</span></h1>
+        <p id="description">Каждый твой ход — погоня всех врагов. Уворачивайся и бери фигуры. Волна пройдена, когда побеждены все.</p>
+        <button id="hints" class="hints-button" aria-pressed="true" aria-controls="board">Подсказки: вкл</button>
+        <div class="wave-progress"><div><strong id="wave-label">Волна 1</strong><span id="turn-label">Взято 0 из 1</span></div><div id="progress" aria-label="Побеждённые враги"></div></div>
+        <div class="stats"><span class="pill" id="score">0 очков</span><span class="coin-count" id="coins">0 монет</span><span class="star-count" id="stars" title="Собранные звёзды">☆ 0</span></div>
+        <div class="actions"><button id="freeze" class="freeze-button"><span aria-hidden="true">❄</span> Заморозить <b id="charges">1</b></button><button id="pause" class="primary">Пауза</button></div>
+        <p id="feedback" role="status" aria-live="polite"></p>
+        <div id="enemy-list" class="enemy-list" aria-label="Намерения противников"></div>
+        <div class="panel-bottom"><p id="next-bonus"></p><p id="best" class="best"></p></div>
+      </div>
+    </aside>
+    <footer class="game-footer"><span>ХОД ЗА ХОДОМ <i> / </i> LAST KNIGHT</span><span>Один конь. Сколько волн?</span><button id="share" class="round-button" aria-label="Скопировать результат" title="Скопировать результат"><img src="assets/figma/7594d.svg" alt=""></button></footer>
+  </main>
+  <dialog id="help" aria-labelledby="help-title"><button class="close round-button" data-close="help" aria-label="Закрыть правила">×</button><span class="dialog-kicker">ХОД ЗА ХОДОМ</span><h2 id="help-title">Один ход — один ответ</h2><p>Ходи конём: две клетки прямо и одна вбок. Можно перепрыгивать через фигуры. Клик по врагу на доступной клетке — взятие. <strong>Если взяли коня, забег окончен.</strong></p><p>Красные клетки под ударом. Подсветка доступного взятия учитывает, что взятый противник исчезнет. Пунктирный силуэт предупреждает о появлении; пунктир и метка показывают клетку следующего перемещения врага. Если враг сможет взять коня, взятие имеет приоритет. Кнопка «Подсказки» скрывает красные поля атак и подсветку ходов коня; метки ходов врагов остаются видимыми. Выбор сохраняется после перезагрузки.</p><p>После каждого твоего хода все незамороженные враги пытаются взять коня. Если взятия нет, каждый выполняет заранее отмеченный ход преследования: старается создать угрозу коню или приблизиться. Враг не меняет отмеченную клетку тайком: если путь перекрыт, он остаётся на месте. В бонусе они идут к королю. Пропускает движение только замороженная фигура или та, у которой закрыт путь. После перемещения второй атаки нет; новые фигуры не атакуют в фазу появления.</p><p>Нажми «Заморозить», затем выбери врага на доске или в списке. Он пропустит три ответа. Это не тратит ход. Запас — до двух зарядов.</p><p>Чтобы пройти волну, возьми всех её противников. Ограничения по ходам нет. Взятые фигуры не заменяются. После победы появляется экран «Поле очищено» с номером следующей волны. Следующий состав приходит только по кнопке. Пройденная волна даёт 100 + 10 × номер волны очков. Взятия — 25–150, монета — 10, звезда — 25.</p><p>После волн 3, 9, 15… — 20 секунд сбора монет: пять монет дают заряд. После волн 6, 12, 18… — защита короля на 6 ходов: награда 250 очков и заряд. Потеря короля отменяет только бонус; потеря коня завершает забег. Бонус можно пропустить.</p><p>Это аркада: вражеского короля можно взять, пешки идут вниз и на последней линии становятся ладьями, продолжая погоню. Время на обдумывание не ограничено. Пауза, справка и уход из вкладки останавливают монетный таймер.</p><p class="help-keyboard">Клавиатура: стрелки — выбрать клетку, Enter — ход, F — заморозка, пробел — пауза. Рекорд и текущий забег сохраняются в этом браузере.</p><button class="primary" data-close="help">Понятно</button></dialog>
+  <dialog id="menu-dialog" aria-labelledby="menu-title"><button class="close round-button" data-close="menu-dialog" aria-label="Закрыть меню">×</button><span class="dialog-kicker">ПОСЛЕДНИЙ КОНЬ</span><h2 id="menu-title">Продолжим?</h2><p id="menu-record"></p><button class="primary" data-close="menu-dialog">Вернуться в игру</button><button class="secondary" id="new-run">Начать новый забег</button></dialog>
+  <dialog id="confirm" aria-labelledby="confirm-title"><h2 id="confirm-title">Начать заново?</h2><p>Текущий забег завершится. Рекорд сохранится.</p><button class="primary" id="confirm-new">Новый забег</button><button class="secondary" data-close="confirm">Остаться в игре</button></dialog>
+</body>
+</html>
